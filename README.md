@@ -26,7 +26,7 @@ To run **Volunteer Management** locally, follow these steps:
 
 1️⃣ **Clone the repository:**  
 ```sh
-git clone https://github.com/your-username/Volunteer-Management.git
+git clone https://github.com/nusrat40/volunteer-management.git
 cd Volunteer-Management
 ```  
 
