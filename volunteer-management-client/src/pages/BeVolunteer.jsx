@@ -65,7 +65,7 @@ const BeVolunteer = () => {
   }
 
   return (
-    <div>
+    <div className="mt-20">
        <Helmet>
               <title>Be a Volunteer | Volunteer Management</title>
             </Helmet>
@@ -73,7 +73,7 @@ const BeVolunteer = () => {
         Be a Volunteer
       </h1>
 
-      <div className="bg-purple-50 p-10 rounded-lg">
+      <div className="bg-[#eafaf6] p-10 rounded-lg">
         <form onSubmit={handleRequest}>
           {/* form row */}
           <div className="md:flex mb-6 ">
@@ -288,7 +288,7 @@ const BeVolunteer = () => {
           <input
             type="submit"
             value="Request"
-            className="btn btn-block bg-purple-400"
+            className="btn btn-block bg-[#27ae8a] text-white"
           />
         </form>
       </div>
