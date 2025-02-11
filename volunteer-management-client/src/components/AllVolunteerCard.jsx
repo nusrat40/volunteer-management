@@ -18,14 +18,14 @@ const AllVolunteerCard = ({volunteer}) => {
             <h2 className="card-title font-bold">{title}</h2>
             <p>{des}</p>
            <div className='md:flex gap-4 text-gray-600'>
-            <p>Category: {category}</p>
-            <p>Deadline: {format(new Date(deadline), 'P')}</p>
+            {/* <p>Category: {category}</p>
+            <p>Deadline: {format(new Date(deadline), 'P')}</p> */}
            </div>
   
             <div className="card-actions">
               <button 
               onClick={()=>navigate(`/volunteer-details/${_id}`)}
-              className="btn bg-purple-400 font-bold">View Details</button>
+              className="btn bg-[#27ae8a] text-white font-bold">View Details</button>
             </div>
   
           </div>

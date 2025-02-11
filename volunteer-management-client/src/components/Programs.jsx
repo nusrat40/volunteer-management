@@ -6,7 +6,7 @@ const Programs = ({volunteers}) => {
 
     return (
         <div>
-            <h1 className="text-4xl text-center font-bold mb-10">
+            <h1 className="text-4xl text-center font-bold mb-10 container mx-auto">
             Engage with our ongoing Programs
         </h1>
 

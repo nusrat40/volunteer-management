@@ -12,7 +12,7 @@ const Home = () => {
 
 
     return (
-        <div className='space-y-8'>
+        <div className='space-y-20'>
              <Helmet>
                     <title>Home | Volunteer Management</title>
                   </Helmet>

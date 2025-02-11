@@ -15,7 +15,7 @@ const VolunteerNeedNow = ({volunteers}) => {
 
 
   return (
-    <div>
+    <div className="container mx-auto px-12 mb-20">
       <div className="mb-10 space-y-3 md:w-1/3 text-center mx-auto">
       <h1 className="text-3xl text-center font-bold">
         Volunteer Needs Now
@@ -31,7 +31,7 @@ const VolunteerNeedNow = ({volunteers}) => {
 
       <div className="text-center mt-6">
         <Link to='/all-volunteer'>
-        <button  className="btn bg-purple-400 font-bold w-52">See All</button>
+        <button  className="btn btn-neutral font-bold w-52">SEE ALL</button>
         </Link>
 
       </div>

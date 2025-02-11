@@ -18,7 +18,7 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="hero bg-[#27ae8a] min-h-screen p-16 my-20">
+    <div className="hero bg-[#27ae8a] min-h-screen p-16 ">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 p-3 lg:p-6">
         <div>
           <h1 className="text-6xl font-bold">Support your community today</h1>
