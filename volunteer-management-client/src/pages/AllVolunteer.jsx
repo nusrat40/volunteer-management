@@ -26,7 +26,7 @@ const AllVolunteer = () => {
 
 
   return (
-    <div>
+    <div className="container mx-auto px-12 my-20">
        <Helmet>
               <title>All Volunteer | Volunteer Management</title>
             </Helmet>
@@ -48,14 +48,14 @@ const AllVolunteer = () => {
            
           />
 
-          <button className="px-1 md:px-4 py-3 text-sm font-medium tracking-wider text-gray-100 uppercase transition-colors duration-300 transform bg-purple-500 rounded-md focus:outline-none">
+          <button className="px-1 md:px-4 py-3 text-sm font-medium tracking-wider text-gray-100 uppercase transition-colors duration-300 transform bg-[#27ae8a] rounded-md focus:outline-none">
             Search
           </button>
         </div>
 
         <button
             onClick={toggleLayout}
-            className="px-2 py-2 text-sm font-medium tracking-wider text-gray-100 uppercase bg-purple-500 rounded-md"
+            className="px-2 py-2 text-sm font-medium tracking-wider text-gray-100 uppercase bg-[#27ae8a] rounded-md"
           >
             Change Layout
           </button>
@@ -64,15 +64,8 @@ const AllVolunteer = () => {
       </div>
 
 
-      {/* <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10'>
-        {
-          volunteers.map(volunteer=> <AllVolunteerCard key={volunteer._id} volunteer={volunteer}></AllVolunteerCard>)
-        }
-      </div> */}
-
-
 {isCardLayout ? (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 space-y-2 gap-4 mt-10">
           {volunteers.map((volunteer) => (
             <AllVolunteerCard key={volunteer._id} volunteer={volunteer} />
           ))}
