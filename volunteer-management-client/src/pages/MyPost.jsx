@@ -65,7 +65,7 @@ const MyPost = () => {
 
 
     return (
-        <div>
+        <div className='container mx-auto px-12 mt-20'>
            <Helmet>
                   <title>My Posts | Volunteer Management</title>
                 </Helmet>
@@ -95,7 +95,7 @@ const MyPost = () => {
                     <td>{myPost.title}</td>
                     <td>{myPost.category}</td>
                     <td>{myPost.location}</td>
-                    <td>
+                    <td className='space-y-2'>
                      <Link to={`/update-post/${myPost._id}`}>
                      <button className="btn btn-outline btn-warning md:mr-4 mr-2">
                         Update

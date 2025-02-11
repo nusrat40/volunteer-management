@@ -52,7 +52,7 @@ const MyVolunteerReq = () => {
   };
 
   return (
-    <div>
+    <div className="container mx-auto px-12 mt-20">
        <Helmet>
               <title>My Volunteer Request Posts | Volunteer Management</title>
             </Helmet>

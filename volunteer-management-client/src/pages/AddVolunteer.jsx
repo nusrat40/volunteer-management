@@ -56,7 +56,7 @@ const AddVolunteer = () => {
   };
 
   return (
-    <div className="bg-purple-50 p-24">
+    <div className="bg-[#eafaf6] p-24">
        <Helmet>
         <title>Add Volunteer | Volunteer Management</title>
       </Helmet>
@@ -210,7 +210,7 @@ const AddVolunteer = () => {
         <input
           type="submit"
           value="Add Volunteer"
-          className="btn btn-block bg-purple-400"
+          className="btn btn-block bg-[#27ae8a] text-white"
         />
       </form>
     </div>
