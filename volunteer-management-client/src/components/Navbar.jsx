@@ -31,12 +31,30 @@ const Navbar = () => {
           <li>
             <Link className="font-bold" to='/all-volunteer'>All Volunteer</Link>
           </li>
+          <li>
+            <Link className="font-bold" to='/aboutUs'>About Us</Link>
+          </li>
+         {
+          user && user.email && (
+            <>
+             <li>
+                <Link className="font-bold" to='/add-volunteer'>Add Volunteer</Link>
+              </li>
+              <li>
+                <Link className="font-bold" to='/myPost'>My Post</Link>
+              </li>
+              <li>
+                <Link className="font-bold" to='/myVolunteerReq'>My Volunteer Requests</Link>
+              </li>
+            </>
+          )
+         }
 
     </>
   );
 
   return (
-    <div className="navbar bg-base-100 mb-5 py-3 container mx-auto px-12">
+    <div className="navbar fixed top-0 z-50 bg-base-100 mb-5 py-3 container mx-auto px-12">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -63,9 +81,10 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <a className="btn btn-ghost font-bold text-3xl italic text-purple-500">
-          Voluntee
-        </a>
+       <a className="btn btn-ghost font-bold text-3xl italic text-[#27ae8a]">
+  Voluntee
+</a>
+
       </div>
 
       <div className="navbar-center hidden lg:flex">
@@ -104,15 +123,7 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-              <li>
-                <Link to='/add-volunteer'>Add Volunteer</Link>
-              </li>
-              <li>
-                <Link to='/myPost'>My Post</Link>
-              </li>
-              <li>
-                <Link to='/myVolunteerReq'>My Volunteer Requests</Link>
-              </li>
+             
               
               <li>
                 <button onClick={logOut}>Logout</button>
@@ -126,10 +137,10 @@ const Navbar = () => {
         </div>
         ) : (
           <div className="space-x-4">
-            <button className="btn ">
+            <button className="btn btn-neutral ">
               <Link to="/login">Log in</Link>
             </button>
-            <button className="btn ">
+            <button className="btn btn-neutral">
               <Link to="/register">Register</Link>
             </button>
           </div>
