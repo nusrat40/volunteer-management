@@ -1,27 +1,35 @@
-
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 import { Tooltip } from "react-tooltip";
 import { AuthContext } from "../provider/AuthProvider";
 
+import sun from '../assets/contrast.png';
+import moon from '../assets/moon.png';
+
 const Navbar = () => {
     const { user, logOut } = useContext(AuthContext);
 
-    const [theme,setTheme] = useState("light");
-
-    const toggleTheme = ()=>{
-      const newTheme = theme === "light" ? "dark" : "light";
-      setTheme(newTheme);
-      localStorage.setItem("theme", newTheme);
-      document.documentElement.setAttribute("data-theme", newTheme);
+    const [theme, setTheme] = useState(
+      localStorage.getItem("theme") ? localStorage.getItem("theme") : "light"
+    );
+  
+    // update state on toggle
+    const handleToggle = (e) => {
+      if (e.target.checked) {
+        setTheme("dark");
+      } else {
+        setTheme("light");
+      }
     };
-
-    useEffect(()=>{
-      const savedTheme = localStorage.getItem("theme") || "light";
-    setTheme(savedTheme);
-    document.documentElement.setAttribute("data-theme", savedTheme);
-    },[])
+  
+    // set theme state in localstorage on mount & also update localstorage on state change
+    useEffect(() => {
+      localStorage.setItem("theme", theme);
+      const localTheme = localStorage.getItem("theme");
+      // add custom data-theme attribute to html tag required to update theme using DaisyUI
+      document.querySelector("html").setAttribute("data-theme", localTheme);
+    }, [theme]);
 
   const links = (
     <>
@@ -107,13 +115,20 @@ const Navbar = () => {
 
       <div className="navbar-end gap-4">
 
-        {/* theme button */}
-        <button
-          className="btn btn-sm btn-outline"
-          onClick={toggleTheme}
-          title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
-        >
-          {theme === "light" ? "🌞 Light" : "🌙 Dark"}
+        {/* Toggle button here */}
+        <button className="btn btn-square btn-ghost">
+          <label className="swap swap-rotate w-12 h-12">
+            <input
+              type="checkbox"
+              onChange={handleToggle}
+              // show toggle image based on localstorage theme
+              checked={theme === "light" ? false : true}
+            />
+            {/* light theme sun image */}
+            <img src={sun} alt="light" className="w-8 h-8 swap-on" />
+            {/* dark theme moon image */}
+            <img src={moon} alt="dark" className="w-8 h-8 swap-off" />
+          </label>
         </button>
 
 

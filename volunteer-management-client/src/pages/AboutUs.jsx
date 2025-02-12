@@ -57,7 +57,7 @@ const AboutUs = () => {
         <p className="mt-4 text-lg text-gray-700">
           Become a part of a growing community of volunteers. Together, we can create a better world.
         </p>
-        <a href="/register">
+        <a href="/">
           <button className="mt-6 px-6 py-3 bg-[#27ae8a] text-white font-bold text-lg rounded-lg hover:bg-[#1e8b6a]">
             Get Started
           </button>

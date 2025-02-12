@@ -5,6 +5,7 @@ import { useLoaderData } from 'react-router-dom';
 import OurCause from '../components/OurCause';
 import Programs from '../components/Programs';
 import { Helmet } from 'react-helmet-async';
+import Volunteers from '../components/Volunteers';
 
 const Home = () => {
 
@@ -20,6 +21,7 @@ const Home = () => {
             <VolunteerNeedNow volunteers={volunteers}></VolunteerNeedNow>
             <OurCause></OurCause>
             <Programs volunteers={volunteers}></Programs>
+            <Volunteers></Volunteers>
         </div>
     );
 };

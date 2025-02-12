@@ -18,10 +18,10 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="hero bg-[#27ae8a] min-h-screen p-16 ">
+    <div className="hero bg-[#27ae8a] text-base-content min-h-screen p-16 ">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 p-3 lg:p-6">
         <div>
-          <h1 className="text-6xl font-bold">Support your community today</h1>
+          <h1 className="text-6xl font-bold text-base-content">Support your community today</h1>
           <p className="text-xl text-white py-6">
             By taking part in volunteer activities, you can help those in need
             and make a valuable contribution to our community. It's also a great

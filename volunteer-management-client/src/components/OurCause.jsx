@@ -6,7 +6,7 @@ import card3 from '../assets/card3.svg'
 const OurCause = () => {
     return (
         <div className='bg-[#eafaf6] container mx-auto p-24'>
-            <h1 className='text-4xl font-bold text-center mb-10'>How can you support our cause?</h1>
+            <h1 className='text-4xl font-bold text-center mb-10'>How can you support <span className="text-[#27ae8a]">Our Cause?</span></h1>
             <div className='md:flex gap-2 space-y-4 md:space-y-0'>
                 <div className='space-y-2 bg-white p-4 rounded-md'>
                     <img className='bg-yellow-200  w-16 rounded-full p-2' src={card1} alt="" />

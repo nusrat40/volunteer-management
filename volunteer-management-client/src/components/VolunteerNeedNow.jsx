@@ -18,7 +18,7 @@ const VolunteerNeedNow = ({volunteers}) => {
     <div className="container mx-auto px-12 mb-20">
       <div className="mb-10 space-y-3 md:w-1/3 text-center mx-auto">
       <h1 className="text-3xl text-center font-bold">
-        Volunteer Needs Now
+      <span className="text-[#27ae8a]">Volunteers</span> Needs Now
       </h1>
       <p>By taking part in volunteer activities, you can help those in need and make a valuable contribution to our community.</p>
       </div>
